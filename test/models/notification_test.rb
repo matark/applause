@@ -1,7 +1,9 @@
-require "test_helper"
+require 'test_helper'
 
 class NotificationTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  context 'associations' do
+    should belong_to(:user)
+    should belong_to(:actor).class_name('User')
+    should belong_to(:notifiable)
+  end
 end

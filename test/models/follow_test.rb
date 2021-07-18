@@ -1,7 +1,8 @@
-require "test_helper"
+require 'test_helper'
 
 class FollowTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  context 'associations' do
+    should belong_to(:follower)
+    should belong_to(:followable)
+  end
 end
