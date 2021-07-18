@@ -1,30 +1,41 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+gem 'rails', '~> 6.1'
+gem 'bcrypt', '~> 3.1'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
-gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
-# Use sqlite3 as the database for Active Record
+gem 'gemoji', '~> 3.0'
+gem 'nanoid', '~> 2.0'
+gem 'discard', '~> 1.2'
+
+gem 'kaminari', '~> 1.2'
+gem 'mechanize', '~> 2.8'
+
+gem 'rack-cors', '~> 1.1'
+gem 'rack-attack', '~> 6.5'
+
+gem 'action_policy', '~> 0.5.7'
+gem 'active_model_serializers', '~> 0.10.12'
+gem 'acts_as_follower', github: 'forem/acts_as_follower'
+
+gem 'puma', '~> 5.3'
+gem 'oauth2', '~> 1.4'
 gem 'sqlite3', '~> 1.4'
-# Use Puma as the app server
-gem 'puma', '~> 5.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
-
-# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
-# gem 'rack-cors'
+gem 'bootsnap', '~> 1.7', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'ffaker', '~> 2.18'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
-  gem 'listen', '~> 3.3'
+  gem 'pry', '~> 0.14.1'
+  gem 'listen', '~> 3.5'
+  gem 'better_errors', '~> 2.9'
+end
+
+group :test do
+  gem 'shoulda', '~> 4.0'
+  gem 'factory_bot_rails', '~> 6.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
