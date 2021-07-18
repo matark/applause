@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../config/boot'
+require_relative '../config/setup'
 require 'rake'
 
 Rake.application.run
