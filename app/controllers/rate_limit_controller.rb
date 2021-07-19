@@ -1,0 +1,2 @@
+class RateLimitController < ApplicationController
+end
